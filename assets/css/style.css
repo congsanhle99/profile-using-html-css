@@ -1,0 +1,146 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html { /*kế thừa thẻ có chữ thôi*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 50px;
+    text-align: center;
+    background: rgb(63, 141, 187);
+}
+
+.container {
+    height: 250px;
+    width: 250px;
+    overflow: hidden; /* cắt ảnh vừa khung trên */
+    margin: 0 auto; /* căn giữa */
+    border-radius: 50%; /* bo góc */
+    box-shadow: 0px  1px 5px 0px rgba(0, 0, 0, .3); /* đổ bóng */
+    transition: all .3s  ease-in-out;
+    background: linear-gradient(45deg, #530ed3, #ec25c1)
+}
+
+.container:hover {
+    height: 460px; /* khung vuông bên ngoài */
+    width: 360px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 35px 0px rgba(0,0,0,0.3);
+}
+
+.container .wrapper img{
+    position: relative;
+    display: block;
+    height: 250px; /* khung avt */
+    width: 250px;
+    border-radius: 50%; /* cho avt */
+    border: 5px solid #fff;
+    object-fit: cover; /* chỉnh hình ảnh cho vừa khung */
+    margin: 0px auto;
+    transition: all 0.3s ease;
+}
+
+.wrapper .title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px;
+    line-height: 25px;
+}
+
+.wrapper .place{
+    color: #fff;
+    font-size: 24px;
+    line-height: 0px;
+    margin: 20px 0;
+}
+
+.content{
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 1px 20px 10px 20px !important;
+  }
+
+.content .buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons .btn{
+    height: 40px;
+    width: 150px;
+    margin: 10px 5px;
+}
+
+.buttons .btn button{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn button:hover{
+    transform: scale(0.96);
+}
+
+.container .icons{
+    position: relative;
+    margin-top: -400px;
+    margin-left: 10px;
+    list-style: none;
+}
+
+.container .icons.active{
+    display: none;
+}
+
+.container .icons li{
+    height: 40px;
+    width: 40px;
+    margin: 8px 0;
+    opacity: 0;
+    margin-left: -100px;
+    transition: all 0.5s ease;
+}
+
+.container:hover .icons li{
+    opacity: 1;
+    margin-left: 0;
+}
+
+.container:hover .icons li:nth-child(2){
+    transition-delay: 0.2s;
+}
+
+.container:hover .icons li:last-child{
+    transition-delay: 0.5s;
+}
+
+.container .icons li a{
+    color: #7817d3;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: #fff;
+    display: block;
+    line-height: 40px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.container .icons li a:hover{
+    transform: scale(0.9);
+}
+
